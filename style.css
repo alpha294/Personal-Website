@@ -9,6 +9,12 @@ body {
     background: linear-gradient(to right, #ece9e6, #ffffff);
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Header Styles */
@@ -24,6 +30,7 @@ header {
     position: relative;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 nav ul {
@@ -33,20 +40,6 @@ nav ul {
     justify-content: center;
     gap: 40px;
     margin-top: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: background 0.3s, transform 0.2s;
 }
 
 nav ul li a:hover {
@@ -80,31 +73,7 @@ h2 {
     display: inline-block;
     padding-bottom: 10px;
     margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.3em;
-    color: #555;
-}
-
-ul {
-    padding: 0;
-    list-style: none;
-}
-
-ul li {
-    background: #e0e0e5;
-    margin: 15px 0;
-    padding: 20px;
-    border-radius: 15px;
-    transition: background 0.3s, transform 0.2s;
-    font-size: 1.2em;
-    font-weight: 500;
-}
-
-ul li:hover {
-    background: #d0d0db;
-    transform: translateY(-5px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Profile Image */
@@ -114,28 +83,12 @@ img {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 img:hover {
     transform: scale(1.15);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-/* Contact Links */
-section#contact a {
-    color: #1e3c72;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.3em;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: color 0.3s, background 0.3s;
-}
-
-section#contact a:hover {
-    background: #2a5298;
-    color: white;
-    padding: 12px 17px;
 }
 
 /* Footer Styles */
@@ -150,4 +103,28 @@ footer {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+/* Button Styling */
+button {
+    background: #2a5298;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #1e3c72;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 
